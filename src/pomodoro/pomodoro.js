@@ -84,7 +84,11 @@ function Pomodoro() {
 
   return (
     <div className="pomodoro">
-      <SetDuration sessionVars={sessionVars} />
+      <SetDuration
+        sessionVars={sessionVars}
+        setFocusDuration={setFocusDuration}
+        setBreakDuration={setBreakDuration}
+      />
       <StartPause
         sessionVars={sessionVars}
         setSession={setSession}

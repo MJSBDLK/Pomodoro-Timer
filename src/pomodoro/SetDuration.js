@@ -1,16 +1,28 @@
 import React from "react";
-import { minutesToDuration } from "../utils/duration";
+import Timer from "./Timer";
 
-export default function SetDuration({ sessionVars }) {
-  //console.log(`Svars`, sessionVars)
-
+export default function SetDuration({
+  sessionVars,
+  setFocusDuration,
+  setBreakDuration,
+}) {
   return (
     <div className="row">
       <div className="col">
-        <Timer sessionType="focus" sessionVars={sessionVars} />
+        <Timer
+          sessionType="focus"
+          sessionVars={sessionVars}
+          setFocusDuration={setFocusDuration}
+          setBreakDuration={setBreakDuration}
+        />
       </div>
       <div className="col">
-        <Timer sessionType="break" sessionVars={sessionVars} />
+        <Timer
+          sessionType="break"
+          sessionVars={sessionVars}
+          setFocusDuration={setFocusDuration}
+          setBreakDuration={setBreakDuration}
+        />
       </div>
     </div>
   );

@@ -1,7 +1,12 @@
 import React from "react";
 import { minutesToDuration } from "../utils/duration";
 
-export default function Timer(sessionType, sessionVars) {
+export default function Timer({
+  sessionType,
+  sessionVars,
+  setFocusDuration,
+  setBreakDuration,
+}) {
   const handleFocusDecrease = () => {
     setFocusDuration((currentDuration) => Math.max(5, currentDuration - 5));
   };
